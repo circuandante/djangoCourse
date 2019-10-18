@@ -1,0 +1,56 @@
+django-admin startproject name
+__init__ =declara archivo como modulo de platzi
+url punto de entrada para peticiones 
+
+wsgi usado para deploy
+manage.py nnca setoca siempre s e interactua
+settings.py : 
+    base_dir lugar donde correo el projet
+    secret key : hashing de contraseña
+    debug: marca true cuando salga en produ colacar false
+    allowed_host: [] que hostestanp permitidos
+    installed apps: apps de jango ligadas
+    middleware : apps de jango 
+    root_urlconf archivo principal de url  modulo de entrada
+    template: wsgi archivo de entrada 
+    databases  sqlite <- de prueba
+    /static/: cada vez que se vaya a esta ruta recuelve el archivo estatico
+
+***instalaion
+python install
+pip install virtualenv
+virtualenv .env <- crea entorno virtual
+.env/scripts/activate <- activa el entorno virtual toca ir a la ruta
+pip instal django -U
+django-admin startproject applicacion . <--crear aplicacion //puedes modificar el"." por un nombre de carpeta ya existente
+python manage.py runserver <--inicia servidor tomando encuenta el archivo manage.py que aparecio conel startproject
+python manage.py startapp posts	<--crea app //puedes modificar por otro nombre posts
+esto----------- es un ejemplo para instalarlo desde un archivo de texto
+echo virtualenv==16.4.3> requerimientos.txt <--crea acrhivo requeriments yle pone el texto virtualenv==16.4.3
+pip install -r requerimientos.txt <--instala lo que este dentor del archivo requerimentos
+
+
+una vista en django puede ser una funcion
+django es python
+todas las vistas reciven un reuest y regresan repuesta y a compracion e una respuesta gsi no hay que escribir toda la respuesta amano
+escribir  http hay qu eimportar hhttpresponse
+basicamente django es para crear url y conectar esa url con logica del negocio
+a partir de esto se puede usar el sitema de templates o crear un api
+buena practica tener todo documentado
+
+como django procesa una peticion y argumentos mediante una root_urlconf
+documentacion: https://docs.djangoproject.com/en/2.0/topics/http/urls/
+
+dateTime utlidad de python
+import pdb; pdb.set_trace() para hacer debugger 
+equest.meta que son headers
+request.method o request.get
+  
+***Vistas - django ***
+<-- objeto request --->
+
+paso
+1° busca en setting ROOT_URLCONF busca las urls.py y trata de hacer macth con algun path de irlpatterns
+2° cuando haga match con el path ejecuta la funcion  que se defne como segundo argumento
+3° envia los otros argumentos que nosotros le enviemos
+Django el llama vistas "views" a los archivos que responden a las funciones 
