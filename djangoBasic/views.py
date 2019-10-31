@@ -23,7 +23,8 @@ def hi (request):
 
 def ages (request, name, age):
     if age > 18:
-        message = 'hola {} bienvenido a platzigram'.format(name)
+        message = 'hola {} bienvenido a platzigram]' \
+                  ''.format(name)
     else:
         message = 'hola {} pero no pudes ingresar'.format(name)
     return HttpResponse(message)
