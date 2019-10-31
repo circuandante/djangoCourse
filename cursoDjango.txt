@@ -42,9 +42,11 @@ como django procesa una peticion y argumentos mediante una root_urlconf
 documentacion: https://docs.djangoproject.com/en/2.0/topics/http/urls/
 
 dateTime utlidad de python
-import pdb; pdb.set_trace() para hacer debugger 
-equest.meta que son headers
-request.method o request.get
+	
+request.META que son headers
+request.method o request.GET
+para salir del debugger se oprime C y luego enter
+
   
 ***Vistas - django ***
 <-- objeto request --->
@@ -54,3 +56,8 @@ paso
 2° cuando haga match con el path ejecuta la funcion  que se defne como segundo argumento
 3° envia los otros argumentos que nosotros le enviemos
 Django el llama vistas "views" a los archivos que responden a las funciones 
+
++++path converters 
+url puede tener url pattern
+o path conveter
+<>
