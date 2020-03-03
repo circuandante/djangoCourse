@@ -15,11 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from djangoBasic import views
+from djangoBasic import views as views_basic
+from posts import views as views_post
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.hello_world),
-    path('hi/', views.hi),
-    path('h/<str:name>/<int:age>/', views.ages),
+    path('', views_basic.hello_world),
+    path('hi/', views_basic.hi),
+    path('h/<str:name>/<int:age>/', views_basic.ages),
+    path('hpost/', views_post.proof),
 ]
+

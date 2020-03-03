@@ -1,9 +1,16 @@
+///INTRODUCCIÓN
+
+//Historia de web development
+comenzo como divulgación cientifica
+la popularidad de php es porque puede incluir la logica dentro del template
 django-admin startproject name
-__init__ =declara archivo como modulo de platzi
+__init__ =declara archivo como modulo de proyecto
 url punto de entrada para peticiones 
 
+/frameworks
+
 wsgi usado para deploy
-manage.py nnca setoca siempre s e interactua
+manage.py nunca setoca siempre se interactua (con: python manage.py )
 settings.py : 
     base_dir lugar donde correo el projet
     secret key : hashing de contraseña
@@ -16,9 +23,9 @@ settings.py :
     databases  sqlite <- de prueba
     /static/: cada vez que se vaya a esta ruta recuelve el archivo estatico
 
-***instalaion
+***instalation
 python install
-pip install virtualenv
+pip install virtualenv para esconder las librerias utilizadas
 virtualenv .env <- crea entorno virtual
 .env/scripts/activate <- activa el entorno virtual toca ir a la ruta
 pip instal django -U
@@ -32,8 +39,8 @@ pip install -r requerimientos.txt <--instala lo que este dentor del archivo requ
 
 una vista en django puede ser una funcion
 django es python
-todas las vistas reciven un reuest y regresan repuesta y a compracion e una respuesta gsi no hay que escribir toda la respuesta amano
-escribir  http hay qu eimportar hhttpresponse
+todas las vistas reciven un request y regresan repuesta y a compracion e una respuesta gsi no hay que escribir toda la respuesta amano
+escribir  http hay que importar HttpResponse
 basicamente django es para crear url y conectar esa url con logica del negocio
 a partir de esto se puede usar el sitema de templates o crear un api
 buena practica tener todo documentado
@@ -52,8 +59,8 @@ para salir del debugger se oprime C y luego enter
 <-- objeto request --->
 
 paso
-1° busca en setting ROOT_URLCONF busca las urls.py y trata de hacer macth con algun path de irlpatterns
-2° cuando haga match con el path ejecuta la funcion  que se defne como segundo argumento
+1° busca en setting ROOT_URLCONF busca las urls.py y trata de hacer macth con algun path de urlpatterns
+2° cuando haga match con el path ejecuta la funcion  que se define como segundo argumento
 3° envia los otros argumentos que nosotros le enviemos
 Django el llama vistas "views" a los archivos que responden a las funciones 
 
